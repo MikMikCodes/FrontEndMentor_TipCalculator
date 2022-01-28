@@ -1,0 +1,227 @@
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  // Section: Logo
+  .logo {
+    margin: 36px 0;
+    padding-top: 12px;
+
+    img {
+      width: 81;
+    }
+  }
+
+  // Section: Card
+  .card {
+    background-color: $white;
+    height: auto;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+
+    // Section: Input
+    .input {
+      padding: 30px 32px 0 1.9rem;
+
+      //Section: Bill
+      .bill-container {
+        .label-wrapper {
+          padding-bottom: 4px;
+        }
+        .input-wrapper {
+          padding-bottom: 32px;
+          padding-top: 1px;
+        }
+      }
+
+      // Section: Tip
+      .tip-container {
+        .label-wrapper {
+          padding-bottom: 15px;
+          margin-bottom: 1px;
+        }
+        //Section: Buttons
+        .btn-wrapper {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          row-gap: 15px;
+          column-gap: 16px;
+          padding-top: 2px;
+          padding-bottom: 10px;
+          margin-bottom: 8px;
+
+          .btn-shape {
+            width: 148px;
+            height: 3rem;
+            font-size: 1.5em;
+            font-weight: 600;
+            font-family: "Space Mono", monospace;
+          }
+          .btn {
+            background-color: $very-dark-cyan;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $lighter-grayish-cyan;
+            cursor: pointer;
+          }
+
+          .btn-active {
+            background-color: $strong-cyan;
+            color: $very-dark-cyan;
+          }
+          //custom btn
+          .btn-input-txt {
+            background-color: $lighter-grayish-cyan;
+            border-radius: 2px;
+            border: none;
+            text-align: end;
+            font-size: 1.5rem;
+            padding-right: 17px;
+            color: $very-dark-cyan;
+
+            &:focus {
+              outline: none;
+              border: 2px solid $strong-cyan;
+            }
+          }
+        }
+      }
+
+      //All: labels
+      label {
+        color: $darker-grayish-cyan;
+        font-weight: 600;
+      }
+
+      //All: input boxes
+      .input-text {
+        background-color: $lighter-grayish-cyan;
+        font-family: "Space Mono", monospace;
+        height: 3rem;
+        width: 100%;
+        border: none;
+        border-radius: 6px;
+        text-align: end;
+        padding-right: 16px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: $very-dark-cyan;
+
+        &:focus {
+          outline: none;
+          border: 2px solid $strong-cyan;
+        }
+      }
+
+      // All icons
+      img {
+        position: relative;
+        top: -35px;
+        padding-left: 14px;
+      }
+
+      //Section: people
+      .people-container {
+        padding-top: 15px;
+        .label-wrapper {
+          padding: 0 0 6px 2px;
+          display: flex;
+          justify-content: space-between;
+
+          //error msg
+          .error-msg {
+            color: $error;
+            opacity: 0;
+          }
+
+          .visible-error-msg {
+            transition: opacity 2s ease-in-out;
+            opacity: 1;
+          }
+        }
+      }
+    }
+    //Section: Output
+    .output {
+      background-color: $very-dark-cyan;
+      margin: 32px 23px;
+      padding: 0 22px 37px 24px;
+      border-radius: 15px;
+
+      .output-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        padding-bottom: 10px;
+
+        .descriptions {
+          line-height: 1.4rem;
+          padding-top: 2.3rem;
+
+          h2 {
+            font-size: 16px;
+            color: $white;
+            margin-top: 1px;
+          }
+          p {
+            color: $dark-grayish-cyan;
+            font-size: 13px;
+          }
+
+          .tip-amt {
+            padding-bottom: 13px;
+            padding-top: 2px;
+          }
+
+          .total {
+            padding-top: 9px;
+          }
+        }
+
+        //section: calculations
+        .calculations {
+          text-align: end;
+          line-height: 4rem;
+          font-size: 31px;
+          font-weight: 600;
+          color: $strong-cyan;
+          padding-top: 1.7rem;
+          padding-left: 11px;
+          padding-bottom: 10px;
+
+          .tip-calc {
+            padding-bottom: 4px;
+            padding-top: 2px;
+          }
+        }
+      }
+      //Reset button
+      .reset {
+        width: 100%;
+        height: 3rem;
+        background-color: $strong-cyan;
+        color: $very-dark-cyan;
+        font-size: 1.5rem;
+        font-family: "Space Mono", monospace;
+        border-radius: 5px;
+        border: none;
+        margin-top: 6px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+  .attribution {
+    text-align: center;
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Styles -->
+    <link rel="stylesheet" href="Styles/styles.css" />
+    <title>Tip Calculator: FrontEndMentor Code Along</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Logo -->
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo icon" />
+      </div>
+      <!-- Card -->
+      <div class="card">
+        <!-- Input -->
+        <div class="input">
+          <!-- Bill -->
+          <div class="bill-container">
+            <div class="label-wrapper">
+              <label for="input-bill">Bill</label>
+            </div>
+            <!-- Bill: Input -->
+            <div class="input-wrapper">
+              <input
+                class="input-text"
+                type="text"
+                name="input-bill"
+                id="input-bill"
+                placeholder="0"
+              />
+              <img src="images/icon-dollar.svg" alt="dollar-icon" />
+            </div>
+          </div>
+          <!-- Tip -->
+          <div class="tip-container">
+            <div class="label-wrapper">
+              <label for="input-tip">Select Tip %</label>
+            </div>
+            <!-- Tip: Buttons -->
+            <div class="btn-wrapper">
+              <div class="btn-shape btn tipBtn">5%</div>
+              <div class="btn-shape btn tipBtn">10%</div>
+              <div class="btn-shape btn btn-active tipBtn">15%</div>
+              <div class="btn-shape btn tipBtn">25%</div>
+              <div class="btn-shape btn tipBtn">50%</div>
+              <input
+                class="btn-shape btn-input-txt"
+                type="text"
+                name="input-tip"
+                id="input-tip"
+                placeholder="Custom"
+              />
+            </div>
+          </div>
+          <!-- People -->
+          <div class="people-container">
+            <div class="label-wrapper">
+              <label for="input-people">Number of People</label>
+              <!-- Error Message -->
+              <div class="error-msg">Can't be zero</div>
+            </div>
+            <!-- People: Input -->
+            <div class="input-wrapper">
+              <input
+                class="input-text error-border"
+                type="text"
+                name="input-people"
+                id="input-people"
+                placeholder="1"
+              />
+              <img src="images/icon-person.svg" alt="person-icon" />
+            </div>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="output">
+          <div class="output-grid">
+            <div class="descriptions">
+              <div class="tip-amt">
+                <h2>Tip Amount</h2>
+                <p>/ person</p>
+              </div>
+              <div class="total">
+                <h2>Total</h2>
+                <p>/ person</p>
+              </div>
+            </div>
+            <div class="calculations">
+              <p class="tip-calc value">$0.00</p>
+              <p class="total-calc value">$0.00</p>
+            </div>
+          </div>
+          <button class="reset">Reset</button>
+        </div>
+      </div>
+      <div class="attribution">
+        <p>
+          Created By <a href="https://github.com/MikMikCodes">Raemika L.</a> Project referenced from
+          <a href="https://www.frontendmentor.io/">FrontEndMentor.</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
